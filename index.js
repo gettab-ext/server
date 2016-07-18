@@ -44,7 +44,11 @@ const suggestEngines = {
             if (!rawItems) {
                 return null;
             }
-            return rawItems.map(rawItem => rawItem.replace(RE.tagRemove, ''));
+            return rawItems.map(rawItem => rawItem.replace(RE.tagRemove, '')).map(item => {
+                return {
+                    name: item
+                };
+            });
         }, e => {
             console.log('bing', e);
         });
