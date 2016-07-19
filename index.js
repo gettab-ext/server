@@ -128,7 +128,6 @@ app.get('/s', function (req, res) {
         const suggestProvider = suggestEngineOrder[engineIndex];
 
         suggestEngines[suggestProvider](query).then(items => {
-            console.log('items', items);
             if (!items) {
                 engineIndex++;
                 getNextSuggest();
