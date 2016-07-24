@@ -1,0 +1,17 @@
+{
+  "apps" : [{
+    "name"       : "gettab",
+    "script"     : "bin/www",
+    "instances"  : 1,
+    "exec_mode"  : "cluster",
+    "watch"      : false,
+    "error_file" : "/var/log/gettab-proxy/error.log",
+    "combine_logs": true,
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "env_development" : {
+      "NODE_ENV": "development"
+    }
+  }]
+}
