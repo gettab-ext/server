@@ -1,11 +1,11 @@
 "use strict";
 
 var express = require('express');
+var router = express.Router();
 var got = require('got');
 var _ = require('lodash');
 var bodyParser = require('body-parser');
 
-const PORT = 8210;
 const WEATHER_API_KEY = '490b42fe341d6e49ecffb9439bac6dda';
 
 var app = express();
@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 /**
  * Weather API proxy
  */
-app.get('/w', function (req, res) {
+router.get('/api/w', function (req, res) {
     const coord = req.query.coord;
     if (!coord) {
         res.sendStatus(500);
@@ -31,8 +31,8 @@ app.get('/w', function (req, res) {
 /**
  * Reverse Geocoding proxy
  */
-app.get('/g', function (req, res) {
-    var coord = req.query.coord;
+router.get('/api/g', function (req, res) {
+    const coord = req.query.coord;
     if (!coord) {
         res.sendStatus(500);
     }
@@ -43,8 +43,4 @@ app.get('/g', function (req, res) {
         res.set('Access-Control-Allow-Origin', '*');
         res.send(response.body);
     });
-});
-
-app.listen(PORT, function () {
-    console.log('Example app listening on PORT 3000!');
 });
