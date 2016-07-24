@@ -2,19 +2,16 @@
 
 var express = require('express');
 var router = express.Router();
+
 var got = require('got');
 var _ = require('lodash');
-var bodyParser = require('body-parser');
 
 const WEATHER_API_KEY = '490b42fe341d6e49ecffb9439bac6dda';
-
-var app = express();
-app.use(bodyParser.json());
 
 /**
  * Weather API proxy
  */
-router.get('/api/w', function (req, res) {
+router.get('/w', function (req, res) {
     const coord = req.query.coord;
     if (!coord) {
         res.sendStatus(500);
@@ -31,7 +28,7 @@ router.get('/api/w', function (req, res) {
 /**
  * Reverse Geocoding proxy
  */
-router.get('/api/g', function (req, res) {
+router.get('/g', function (req, res) {
     const coord = req.query.coord;
     if (!coord) {
         res.sendStatus(500);
@@ -44,3 +41,5 @@ router.get('/api/g', function (req, res) {
         res.send(response.body);
     });
 });
+
+module.exports = router;
