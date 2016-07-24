@@ -4,8 +4,8 @@
     "script"     : "index.js",
     "instances"  : 1,
     "exec_mode"  : "cluster",
-    "watch"       : false,
-    "error_file	": "/var/log/gettab-proxy/error.log",
+    "watch"      : false,
+    "error_file" : "/var/log/gettab-proxy/error.log",
     "combine_logs": true
   }]
 }
