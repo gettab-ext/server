@@ -1,0 +1,2 @@
+0 1 * * * /opt/gettab-proxy/scripts/get_wp
+*/10 * * * * /opt/wallpapers/update.sh
