@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"/-->
+
+    <title>GetTab</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <link rel='stylesheet' href='/stylesheets/extension.css' />
+
+    <meta name="Description" content="{{ description }}">
+    <meta property="og:title" content="GetTab New Tab">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ wpUrl }}">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="400">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@gettab_info">
+    <meta name="twitter:title" content="GetTab New Tab">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{ wpUrl }}">
+
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/peefembmkccmkodbcpgilfjgkligpbba">
+
+</head>
+<body>
+    <div class="bg" style="background-image: url('{{ wpUrl }}')"></div>
+    <div class="content">
+        <div class="header"></div>
+        <div class="title">
+            Make your browsing experience beautiful.
+        </div>
+        <div class="bottom-wrapper">
+            <div class="install-title">
+                Install GetTab Chrome extension for <b>free</b>
+            </div>
+            <div class="install-button-wrapper">
+                <a href="{{ extensionUrl }}" class="install-button">
+                    Add to Chrome
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
