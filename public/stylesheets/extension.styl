@@ -73,9 +73,11 @@
     font-family: montserratregular;
     background-color: rgb(83,132,217);
     padding: 24px 32px;
+    padding-left: 68px;
     border-radius: 3px;
     text-decoration: none;
     transition: background-color 0.2s ease-out;
+    position: relative;
 
     &:hover {
         background-color: lighten(rgb(83,132,217), 5)
@@ -83,6 +85,13 @@
 
     &:before {
         content: ''
+        position: absolute;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-size: 30px;
+        top: 18px;
+        left: 22px;
         background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTEyOS4xMzksMjIzLjI5TDU1Ljg3Myw5Ni4zODlDMTAyLjc4MiwzNy42NTcsMTc0Ljk5LDAuMDE5LDI1NiwwLjAxOWM5My43MTcsMCwxNzUuNjU0LDUwLjM2OCwyMjAuMjY2LDEyNS41SDI2Ny4zODFjLTMuNzUyLTAuMzI1LTcuNTQ2LTAuNS0xMS4zODEtMC41QzE5NS4wNjMsMTI1LjAxOSwxNDMuNzExLDE2Ni44NDEsMTI5LjEzOSwyMjMuMjl6IE0zNDcuNjUyLDE2Mi41MTloMTQ2LjczYzExLjM3MSwyOC45NjUsMTcuNjE3LDYwLjUwMiwxNy42MTcsOTMuNWMwLDE0MC40MTMtMTEzLjA1MSwyNTQuNDAyLTI1My4wOTQsMjU1Ljk2M2wxMDQuNjk3LTE4MS4zMzlDMzc4LjM0NCwzMDkuNDU0LDM4NywyODMuNzI5LDM4NywyNTYuMDE5QzM4NywyMTkuNDM0LDM3MS45MTgsMTg2LjMwOSwzNDcuNjUyLDE2Mi41MTl6IE0xNjMsMjU2LjAxOWMwLTUxLjI4LDQxLjcyLTkzLDkzLTkzYzUxLjI3OSwwLDkzLDQxLjcyLDkzLDkzYzAsNTEuMjc5LTQxLjcyMSw5My05Myw5M0MyMDQuNzIsMzQ5LjAxOSwxNjMsMzA3LjI5OCwxNjMsMjU2LjAxOXogTTI5MS4wOTEsMzgyLjIzOWwtNzMuMjg5LDEyNi45MzlDOTQuNTM2LDQ5MC43MzYsMCwzODQuNDIxLDAsMjU2LjAxOWMwLTQ1LjYwOSwxMS45NDItODguNDIzLDMyLjg0OC0xMjUuNTEybDEwNC41MTUsMTgxLjAyN2MyMC45MzQsNDQuNTU1LDY2LjIzOCw3NS40ODQsMTE4LjYzNyw3NS40ODRDMjY4LjE1LDM4Ny4wMTksMjc5LjkxOCwzODUuMzQ5LDI5MS4wOTEsMzgyLjIzOXoiLz48L3N2Zz4=')
     }
 }
