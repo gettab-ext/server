@@ -11,9 +11,10 @@ var router = express.Router();
 
 router.get('/weather', function(req, res) {
     const clientIP = req.headers['x-forwarded-for'];
+    const mock = req.query.mock;
 
     geolocation.getLocation(clientIP).then(location => {
-        weather.getWeatherData(location.latitude, location.longitude).then(weatherData => {
+        weather.getWeatherData(location.latitude, location.longitude, mock).then(weatherData => {
             res.send(_.merge({location: location}, weatherData));
         });
     });
