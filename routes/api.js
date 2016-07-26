@@ -4,8 +4,8 @@ var express = require('express');
 var got = require('got');
 var _ = require('lodash');
 
-var geolocation = require('geolocation');
-var weather = require('weather');
+var geolocation = require('../lib/geolocation');
+var weather = require('../lib/weather');
 
 var router = express.Router();
 
