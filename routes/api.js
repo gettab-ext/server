@@ -14,26 +14,7 @@ router.get('/weather', function(req, res) {
 
     geolocation.getLocation(clientIP).then(location => {
         weather.getWeatherData(location.latitude, location.longitude).then(weatherData => {
-            res.send({
-                location: {
-                    latitude: location.latitude,
-                    longitude: location.longitude,
-                    city: location.city
-                },
-                now: {
-                    feelsLike: '',
-                    iconCode: '',
-                    windSpeed: '',
-                    precipProbability: ''
-                },
-                forecast: [{
-                    shortDescription: '',
-                    timeLocalStr: '',
-                    temperatureLow: '',
-                    temperatureHigh: ''
-                }],
-                weatherData: weatherData
-            });
+            res.send(_.merge(location, weatherData));
         });
     });
 
