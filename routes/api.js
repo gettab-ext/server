@@ -1,10 +1,13 @@
 "use strict";
 
 var express = require('express');
-var router = express.Router();
-
 var got = require('got');
 var _ = require('lodash');
+
+var geolocation = require('geolocation');
+var weather = require('weather');
+
+var router = express.Router();
 
 /**
  * Weather API proxy
@@ -25,32 +28,31 @@ router.get('/g', function (req, res) {
 });
 
 router.get('/weather', function(req, res) {
-    const coord = req.query.coord;
-    if (!coord) {
-        res.sendStatus(500);
-    }
+    const clientIP = req.headers['x-forwarded-for'];
 
-    console.log('req', req);
+    geolocation.getLocation(clientIP).then(location => {
 
-    res.send({
-        location: {
-            latitude: '',
-            longitude: '',
-            city: ''
-        },
-        now: {
-            feelsLike: '',
-            iconCode: '',
-            windSpeed: '',
-            precipProbability: ''
-        },
-        forecast: [{
-            shortDescription: '',
-            timeLocalStr: '',
-            temperatureLow: '',
-            temperatureHigh: ''
-        }]
+        res.send({
+            location: {
+                latitude: location.latitude,
+                longitude: location.longitude,
+                city: location.city
+            },
+            now: {
+                feelsLike: '',
+                iconCode: '',
+                windSpeed: '',
+                precipProbability: ''
+            },
+            forecast: [{
+                shortDescription: '',
+                timeLocalStr: '',
+                temperatureLow: '',
+                temperatureHigh: ''
+            }]
+        });
     });
+
 });
 
 module.exports = router;
