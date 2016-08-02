@@ -2,7 +2,7 @@
   "apps" : [{
     "name"       : "gettab",
     "script"     : "bin/www",
-    "instances"  : 1,
+    "instances"  : "max",
     "exec_mode"  : "cluster",
     "watch"      : false,
     "error_file" : "/var/log/gettab-proxy/error.log",
