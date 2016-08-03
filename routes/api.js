@@ -10,7 +10,7 @@ var weather = require('../lib/weather');
 var router = express.Router();
 
 router.get('/weather', function(req, res) {
-    const clientIP = req.headers['x-forwarded-for'];
+    const clientIP = req.headers['x-forwarded-for'] || req.ip;
     const mock = req.query.mock;
 
     geolocation.getLocation(clientIP).then(location => {
