@@ -6,16 +6,19 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "bluebird": "^3.4.1",
     "body-parser": "~1.15.1",
+    "cheerio": "^0.20.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "express": "~4.13.4",
-    "hbs": "~4.0.0",
-    "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0",
-    "cheerio": "^0.20.0",
     "got": "^6.3.0",
+    "hbs": "~4.0.0",
     "lodash": "^4.13.1",
-    "stylus": "0.54.5"
+    "morgan": "~1.7.0",
+    "redis": "^2.6.2",
+    "serve-favicon": "~2.3.0",
+    "stylus": "0.54.5",
+    "winston": "^2.2.0"
   }
 }

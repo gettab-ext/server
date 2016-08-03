@@ -14,7 +14,7 @@ router.get('/weather', function(req, res) {
     const mock = req.query.mock;
 
     geolocation.getLocation(clientIP).then(location => {
-        weather.getWeatherData(location.latitude, location.longitude, mock).then(weatherData => {
+        weather.getWeatherData(location.latitude, location.longitude, location.city, mock).then(weatherData => {
             res.set('Access-Control-Allow-Origin', '*');
             res.send(_.merge({location: location}, weatherData));
         });
