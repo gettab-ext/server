@@ -7,7 +7,8 @@ var items = file.split('ID:')
     .map(s => s.split(/[\n\r]+/).filter(i => i))
     .map(i => {
         return {
-            id: i[0],
+            filename: `${i[0].trim()}.jpg`,
+            thumb_filename: `thumbs/${i[0].trim()}.jpg`,
             name: i[1],
             desc: i[2]
         };

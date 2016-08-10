@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 wget https://yandex.ru/images/today?size=1920x1080 -O /opt/wallpapers/wp.png
-node /opt/wallpapers/scripts/parse_wp_info.js > /opt/wallpapers/wp-info.json
+node /opt/gettab-server/scripts/parse_wp_info.js > /opt/wallpapers/wp-info.json
