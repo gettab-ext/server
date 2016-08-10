@@ -1,1 +1,1 @@
-docker run --name gettab-redis -d redis
+docker run --name gettab-redis --net=host -d redis
