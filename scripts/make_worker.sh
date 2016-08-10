@@ -8,7 +8,10 @@ cd /opt/gettab-server/scripts;
 ./run_geoip_server.sh;
 ./install_nodejs.sh;
 
+cd ../;
+
 sudo npm i -g pm2;
+sudo apt-get install nginx;
 
 npm i;
 pm2 start gettab.json;
