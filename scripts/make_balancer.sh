@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+ulimit -n 65536;
+
 sudo apt-get update;
 sudo apt-get install nginx -y;
 
